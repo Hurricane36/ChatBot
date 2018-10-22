@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import chat.model.Chatbot;
 
-public class ChabotTest
+public class ChabotTest2
 {
 	private Chatbot testedBot;
 

@@ -19,8 +19,20 @@ public class ChatController
 			
 		}
 	}
-	public String interactWithChatBot()
+	public String interactwithchatbot(String text)
 	{
-		return null;
+		String chatbotSays = JOptionPane.showInputDialog(text);
+		chatbotSays = SimpleBot.processText(chatbotSays);
+		return"";
 	}
+	
+		public String useChatbotCheckers(String text)
+		{
+			return null;
+		}
+		public Object getChatbot()
+		{
+			
+			return null;
+		}
 }

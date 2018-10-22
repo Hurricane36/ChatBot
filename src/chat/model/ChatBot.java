@@ -28,7 +28,8 @@ public class ChatBot
 		responseList.add("Whats your mothers maiden name?");
 		responseList.add("What was the name of your first pet?");
 		
-		spookyList.add("Halloween more spooktober");
+		spookyList.add("Hallowenn");
+		spookyList.add("Halloween more like spooktober");
 		spookyList.add("Your identity was stolen!!!");
 		spookyList.add("Your car was stolen");
 		spookyList.add("BOOOOOO!");
