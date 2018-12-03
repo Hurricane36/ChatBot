@@ -1,13 +1,14 @@
-package gui.view;
+package chat.view;
 import javax.swing.*;
 
-import gui.controller.GUIController;
+import chat.controller.ChatController;
+
 public class ChatFrame extends JFrame
 {
-	private GUIController appController;
+	private ChatController appController;
 	private ChatPanel appPanel;
 	
-public ChatFrame(GUIController appController)
+public ChatFrame(ChatController appController)
 {
 	super();
 	this.appController = appController;
