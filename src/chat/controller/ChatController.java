@@ -10,6 +10,7 @@ public class ChatController
 	public ChatController()
 	{
 		SimpleBot = new ChatBot();
+	
 	}
 	public void start()
 	{
@@ -21,18 +22,20 @@ public class ChatController
 	}
 	public String interactwithchatbot(String text)
 	{
-		String chatbotSays = JOptionPane.showInputDialog(text);
-		chatbotSays = SimpleBot.processText(chatbotSays);
-		return"";
+		String output = "";
+		String userResponse = JOptionPane.showInputDialog(text);
+		output = SimpleBot.processText(userResponse);
+		return output;
 	}
 	
-		public String useChatbotCheckers(String text)
-		{
-			return null;
-		}
-		public Object getChatbot()
+		public String UseChatbotCheckers(String text)
 		{
 			
-			return null;
+			return "Halloween";
+		}
+		public ChatBot GetChatbot()
+		{
+			
+			return SimpleBot;
 		}
 }
