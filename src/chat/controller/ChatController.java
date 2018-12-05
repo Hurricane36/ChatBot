@@ -6,24 +6,24 @@ import chat.view.*;
 public class ChatController
 {
 	private ChatBot SimpleBot;
-	private ChatFrame ChatFrame;
+	private ChatFrame appFrame;
 	public ChatController()
 	{
 		SimpleBot = new ChatBot();
-		ChatFrame = new ChatFrame(this);
+		appFrame = new ChatFrame(this);
 	}
 	public void start()
 	{
-		String userText = "";
-		while (!userText.equalsIgnoreCase("Quit"))
-		{
-			
-		}
+		
 	}
 	public String interactwithchatbot(String text)
 	{
 		String output = "";
-		String userResponse = JOptionPane.showInputDialog(text);
+		if(text == null)
+		{
+			output += "You really should not send null";
+		}
+		String userResponse = JOptionPane.showInputDialog(null, "Hi whats up??");
 		output = SimpleBot.processText(userResponse);
 		return output;
 	}
@@ -40,7 +40,7 @@ public class ChatController
 		}
 		public ChatFrame getChatFrame()
 		{
-			return ChatFrame;
+			return appFrame;
 		}
 		
 		
