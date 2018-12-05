@@ -4,6 +4,8 @@ import chat.controller.ChatController;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 import javax.swing.*;
 
@@ -58,7 +60,7 @@ public class ChatPanel extends JPanel
 	{
 		this.setLayout(appLayout);
 		this.setPreferredSize(new Dimension(800,600));
-		this.setBackground(Color.BLACK);
+		this.setBackground(Color.RED);
 		this.add(chatPane);
 		this.add(chatButton);
 		this.add(saveButton);
@@ -116,6 +118,20 @@ public class ChatPanel extends JPanel
 	
 	private void setupListeners()
 	{
+		chatButton.addActionListener(new ActionListener)
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				
+			}
+			
+		});
+		
+		
+		
+		
+		
+		
 		
 	}
 	
