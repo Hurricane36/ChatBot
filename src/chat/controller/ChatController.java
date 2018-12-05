@@ -2,15 +2,15 @@ package chat.controller;
 import javax.swing.JOptionPane;
 
 import chat.model.ChatBot;
-
+import chat.view.*;
 public class ChatController
 {
 	private ChatBot SimpleBot;
-	
+	private ChatFrame ChatFrame;
 	public ChatController()
 	{
 		SimpleBot = new ChatBot();
-	
+		ChatFrame = new ChatFrame(this);
 	}
 	public void start()
 	{
@@ -38,4 +38,10 @@ public class ChatController
 			
 			return SimpleBot;
 		}
+		public ChatFrame getChatFrame()
+		{
+			return ChatFrame;
+		}
+		
+		
 }
