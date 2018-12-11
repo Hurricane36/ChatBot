@@ -28,6 +28,17 @@ public class ChatController
 			
 			return "Halloween";
 		}
+		
+		private void close()
+		{
+			System.exit(0);
+		}
+		
+		public void handleErrors(Exception error)
+		{
+			JOptionPane.showMessageDialog(appFrame, error.getMessage());
+		}
+		
 		public ChatBot GetChatbot()
 		{
 			
