@@ -19,12 +19,7 @@ public class ChatController
 	public String interactwithchatbot(String text)
 	{
 		String output = "";
-		if(text == null)
-		{
-			output += "You really should not send null";
-		}
-		String userResponse = JOptionPane.showInputDialog(null, "Hi whats up??");
-		output = SimpleBot.processText(userResponse);
+		output = SimpleBot.processText(text);
 		return output;
 	}
 	

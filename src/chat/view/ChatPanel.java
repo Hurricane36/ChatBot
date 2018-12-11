@@ -11,7 +11,7 @@ import javax.swing.*;
 
 public class ChatPanel extends JPanel
 {
-	private ChatController app;
+	private ChatController appController;
 	private JTextField chatField;
 	private JTextArea chatArea;
 	private SpringLayout appLayout;
@@ -23,10 +23,10 @@ public class ChatPanel extends JPanel
 	
 	
 	
-	public ChatPanel(ChatController app)
+	public ChatPanel(ChatController appController)
 	{
 		super();
-		this.app = app;
+		this.appController = appController;
 		appLayout = new SpringLayout();
 		saveButton = new JButton("Save");
 		loadButton = new JButton("Load");
@@ -118,11 +118,16 @@ public class ChatPanel extends JPanel
 	
 	private void setupListeners()
 	{
-		chatButton.addActionListener(new ActionListener)
+		chatButton.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				String userText = chatField.getText();
+				String response = "";
+				response = appController.interactwithchatbot(userText);
+				chatArea.append(response);
+				chatArea.setCaretPosition(chatArea.getDocument().getLength());
+				chatField.setText("");
 			}
 			
 		});

@@ -76,25 +76,36 @@ public class ChatBot
 	public String processText(String userText)
 	{
 		String answer = "";
-		 answer += "You said: " + userText;
 		 
-		if (contentChecker(userText))
+		if (!validityChecker(userText))
 		{
-			answer = "";
-			answer += "Chatbot Says: You said the special words. \n";
+			answer += "You really should not send null\n";
 		}
-		else if (answer == null)
+		else 
 		{
-			answer += " Chatbot Says: It appears we have recieved null...";
-		} 
-		else
-		{
+			answer += "You said: " + userText + "\n";
+			if(contentChecker(userText))
+			{
+				answer += "You said the special words. \n";
+			}
 			int randomIndex = (int) (Math.random() * responseList.size());
-			answer += "Chatbot says: " + responseList.get(randomIndex);
+			answer += "Chatbot says: " + responseList.get(randomIndex) + "\n";
+			
+		}
+		return answer;
+	}
+	
+	
+	public boolean validityChecker(String text)
+	{
+		boolean isValid = false;
+		
+		if(text!= null && text.length() > 3)
+		{
+			isValid = true;
 		}
 		
-		return answer;
-		
+		return isValid;
 	}
 
 	public ArrayList<String> getSpookyList()
